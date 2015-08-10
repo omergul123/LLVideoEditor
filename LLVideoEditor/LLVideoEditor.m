@@ -156,4 +156,10 @@
     }];
 }
 
+#pragma mark Getters
+
+- (CGSize)videoSize {
+    return self.videoData.videoSize;
+}
+
 @end
