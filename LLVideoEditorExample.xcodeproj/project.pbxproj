@@ -24,6 +24,8 @@
 		17F97ACD1B126FC80045633E /* cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F97ACA1B126FC80045633E /* cancel@3x.png */; };
 		17FD4ECB1B1B930A009166E7 /* LLAddLayerCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FD4ECA1B1B930A009166E7 /* LLAddLayerCommand.m */; };
 		17FD4ED11B1BB248009166E7 /* LLAddAudioCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FD4ED01B1BB248009166E7 /* LLAddAudioCommand.m */; };
+		532C7B161C2C3F1600BEC387 /* LLMergeCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 532C7B151C2C3F1600BEC387 /* LLMergeCommand.m */; };
+		532C7B171C2C3F1600BEC387 /* LLMergeCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 532C7B151C2C3F1600BEC387 /* LLMergeCommand.m */; };
 		662FA662166554732FC2D5D7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA7530E0A8255DB47DA9A9E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		17FD4ECF1B1BB248009166E7 /* LLAddAudioCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLAddAudioCommand.h; sourceTree = "<group>"; };
 		17FD4ED01B1BB248009166E7 /* LLAddAudioCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLAddAudioCommand.m; sourceTree = "<group>"; };
 		242DAA5169A01C87AE015614 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		532C7B141C2C3F1600BEC387 /* LLMergeCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLMergeCommand.h; sourceTree = "<group>"; };
+		532C7B151C2C3F1600BEC387 /* LLMergeCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLMergeCommand.m; sourceTree = "<group>"; };
 		6CA7530E0A8255DB47DA9A9E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EEE3EF13A06B178AE2A9D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +169,8 @@
 				17FD4ECA1B1B930A009166E7 /* LLAddLayerCommand.m */,
 				17FD4ECF1B1BB248009166E7 /* LLAddAudioCommand.h */,
 				17FD4ED01B1BB248009166E7 /* LLAddAudioCommand.m */,
+				532C7B141C2C3F1600BEC387 /* LLMergeCommand.h */,
+				532C7B151C2C3F1600BEC387 /* LLMergeCommand.m */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 				170030A31B11F5A200585CEB /* Frameworks */,
 				170030A41B11F5A200585CEB /* Resources */,
 				4F1D2F2B01A617C144BAE61C /* Copy Pods Resources */,
+				19304A21712131AC2FF55F24 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,6 +327,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		19304A21712131AC2FF55F24 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4F1D2F2B01A617C144BAE61C /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,6 +389,7 @@
 				17F97AC21B12604D0045633E /* HomeViewController.m in Sources */,
 				17FD4ECB1B1B930A009166E7 /* LLAddLayerCommand.m in Sources */,
 				1744CC051B1A3F49001A9045 /* LLCropCommand.m in Sources */,
+				532C7B161C2C3F1600BEC387 /* LLMergeCommand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				532C7B171C2C3F1600BEC387 /* LLMergeCommand.m in Sources */,
 				170030C61B11F5A300585CEB /* LLVideoEditorExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +510,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LLVideoEditorExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -497,6 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LLVideoEditorExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
