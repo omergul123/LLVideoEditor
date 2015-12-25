@@ -15,6 +15,7 @@
 #import "LLRotateCommand.h"
 #import "LLAddLayerCommand.h"
 #import "LLAddAudioCommand.h"
+#import "LLMergeCommand.h"
 
 @interface LLVideoEditor()
 @property (strong, nonatomic) LLVideoData *videoData;
@@ -85,6 +86,20 @@
                                                                    audioAsset:asset
                                                                    startingAt:startingAt
                                                                 trackDuration:trackDuration];
+    [self.commands addObject:command];
+}
+
+- (void)addVideoAsset:(AVAsset *)asset {
+    LLMergeCommand * command = [[LLMergeCommand alloc] initWithVideoData:self.videoData
+                                                          mergeWithAsset:asset];
+    
+    [self.commands addObject:command];
+}
+
+- (void)addVideoAssets:(NSArray<AVAsset *> *)assets {
+    LLMergeCommand * command = [[LLMergeCommand alloc] initWithVideoData:self.videoData
+                                                         mergeWithAssets:assets];
+    
     [self.commands addObject:command];
 }
 

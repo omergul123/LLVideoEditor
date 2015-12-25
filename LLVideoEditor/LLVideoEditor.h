@@ -65,6 +65,18 @@ typedef enum : NSUInteger {
 - (void)addAudio:(AVAsset *)asset startingAt:(float)startingAt trackDuration:(float)trackDuration;
 
 /**
+ * Merge video with given video.
+ * @param asset Video asset
+ */
+- (void)addVideoAsset:(AVAsset *)asset;
+
+/**
+ * Merge video with given videos.
+ * @param asset Video asset
+ */
+- (void)addVideoAssets:(NSArray<AVAsset *> *)assets;
+
+/**
  * Export the edited video.
  * @param exportUrl Provide a valid URL to export the edited video.
  * @param completionBlock block to be executed after export is completed (called on main thread)
