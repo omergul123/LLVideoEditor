@@ -149,6 +149,11 @@
     // add audio
     [videoEditor addAudio:audioAsset startingAt:1 trackDuration:3];
     
+    AVAsset * videoAsset1 = [[AVURLAsset alloc] initWithURL:videoURL options:nil];
+    AVAsset * videoAsset2 = [[AVURLAsset alloc] initWithURL:videoURL options:nil];
+    [videoEditor addVideoAssets:@[videoAsset1, videoAsset2]];
+    
+    
     [videoEditor exportToUrl:exportUrl completionBlock:^(AVAssetExportSession *session) {
         
         switch (session.status) {
