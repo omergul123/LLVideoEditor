@@ -87,6 +87,8 @@
     }
     else {
         instruction = (AVMutableVideoCompositionInstruction *) [self.videoData.videoComposition.instructions lastObject];
+        AVMutableVideoCompositionLayerInstruction *layerInstruction = (AVMutableVideoCompositionLayerInstruction *)[instruction.layerInstructions firstObject];
+        [layerInstruction setOpacity:0.0 atTime:duration];
     }
     instruction.timeRange = CMTimeRangeMake(kCMTimeZero, overalDuration);
     
